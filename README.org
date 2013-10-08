@@ -22,7 +22,9 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ** Reference implementation
+
 ===========================
+
 Short summary: no restrictions.
 
 While I wrote all of this code myself, I read a lot of code before I began
