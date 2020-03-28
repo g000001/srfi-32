@@ -1,4 +1,4 @@
-(cl:in-package :srfi-32.internal)
+(cl:in-package "https://github.com/g000001/srfi-32#internals")
 (in-readtable :rnrs)
 
 ;;; The SRFI-?? sort package -- sorted predicates

@@ -1,4 +1,4 @@
-* SRFI 32
+* SRFI 32 for CL: Sort Libraries
 - copyright (C) Olin Shivers (1998, 1999). 
 All Rights Reserved. 
 

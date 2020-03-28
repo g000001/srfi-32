@@ -1,4 +1,4 @@
-(cl:in-package :srfi-32.internal)
+(cl:in-package "https://github.com/g000001/srfi-32#internals")
 (in-readtable :rnrs)
 
 ;;; The SRFI-32 sort package -- stable vector merge & merge sort -*- Scheme -*-
@@ -27,14 +27,14 @@
 ;;; Stable vector merge -- V1's elements come out ahead of equal V2 elements.
 
 (define (vector-merge v1 v2 < . maybe-starts+ends)
-  (srfi-13-internal::let-optionals* maybe-starts+ends ((start1 0) (end1 (vector-length v1))
+  (let-optionals* maybe-starts+ends ((start1 0) (end1 (vector-length v1))
 				    (start2 0) (end2 (vector-length v2)))
     (let ((ans (make-vector (+ (- end1 start1) (- end2 start2)))))
       (%vector-merge! ans v1 v2 < 0 start1 end1 start2 end2)
       ans)))
 
 (define (vector-merge! v v1 v2 < . maybe-starts+ends)
-  (srfi-13-internal::let-optionals* maybe-starts+ends ((start0 0)
+  (let-optionals* maybe-starts+ends ((start0 0)
 				    (start1 0) (end1 (vector-length v1))
 				    (start2 0) (end2 (vector-length v2)))
     (%vector-merge! v v1 v2 < start0 start1 end1 start2 end2)))
@@ -87,7 +87,7 @@
 ;;; (vector-merge-sort! v < [start end temp]) -> unspecific
 
 (define (vector-merge-sort! v < . maybe-args)
-  (srfi-13-internal::let-optionals* maybe-args ((start 0)
+  (let-optionals* maybe-args ((start 0)
 			     (end (vector-length v))
 			     (temp (vector-copy v)))
     (%vector-merge-sort! v < start end temp)))

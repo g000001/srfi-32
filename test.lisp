@@ -1,4 +1,4 @@
-(cl:in-package :srfi-32.internal)
+(cl:in-package "https://github.com/g000001/srfi-32#internals")
 (in-readtable :rnrs)
 
 ;;; Little test harness, 'cause I'm paraoid about tricky code.
@@ -62,3 +62,5 @@
   (do ((i (- (vector-length v) 1) (- i 1)))
       ((< i 0))
     (vector-set! v i (rand maxval))))
+
+

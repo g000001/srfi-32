@@ -1,4 +1,4 @@
-(cl:in-package :srfi-32.internal)
+(cl:in-package "https://github.com/g000001/srfi-32#internals")
 (in-readtable :rnrs)
 
 ;;; A list merge sort of my own device. Needs to be commented & polished.
@@ -14,7 +14,7 @@
 
     ((mlet (((var) exp) rest ***) body ***)
      (let ((var exp)) 
-       (cl:declare (cl:ignorable var))
+       ;; (cl:declare (cl:ignorable var))
        (mlet (rest ***) body ***)))
 
     ((mlet ((vars exp) rest ***) body ***)
